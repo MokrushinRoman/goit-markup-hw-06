@@ -566,6 +566,27 @@
 
           </ul>
         </div>
+
+        <div class="foot-form-container">
+
+          <b class="foot-form-tagline">Подпишитесь на рассылку</b>
+
+          <form class="foot-form">
+
+            <div class="foot form-field">
+              <input class="foot-form-input" type="email" name="email" id="email" placeholder="E-mail" data-placeholder="E-mail">
+              <label class="foot-form-label" for="email"><span lang="en">your@mail.com</span></label>
+            </div>
+
+            <button class="foot sub-btn" type="submit">
+              Подписаться
+              <svg class="foot-sub-icon">
+                <use href="./images/icons/main/footer-icons/foot-sub-icon.svg#icon-foot-sub-icon"></use>
+              </svg>
+            </button>
+
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -576,15 +597,132 @@
         <button class="modal-btn" type="button" data-modal-close>
           
           <svg class="modal-close-icon">
-            <use href="./images/icons/main/modal-icon/close-icon.svg#icon-close-icon"></use>
+            <use href="./images/icons/main/modal-icon/modal.svg#icon-close-icon"></use>
           </svg>
-          
+
         </button>
+
+        
+
+          <b class="modal-title" >Оставьте свои данные, мы вам перезвоним</b>
+
+          <form class="modal-form">
+            
+              <div class="modal-container user-name">                
+
+                <input class="input-name modal-input" type="text" name="user-name" id="user-name" placeholder="Имя" data-placeholder="Имя">
+                <label class="label modal-label" for="user-name">Ф.И.О</label>
+                
+                <svg class="modal-icon">
+                  <use href="./images/icons/main/modal-icon/modal.svg#icon-person"></use>
+                </svg>
+
+              </div>
+
+              <div class="modal-container tel">               
+
+                <input class="input-tel modal-input" type="tel" name="tel" id="user-tel" placeholder="Телефон" data-placeholder="Телефон">
+                <label class="label modal-label" for="user-tel">+380**-***-**-**</label>
+             
+                <svg class="modal-icon">
+                  <use href="./images/icons/main/modal-icon/modal.svg#icon-phone"></use>
+                </svg>
+
+              </div>
+
+              <div class="modal-container email">
+                
+                <input class="input-mail modal-input" type="email" name="mail" id="user-mail" placeholder="Почта" data-placeholder="Почта">
+                <label class="label modal-label" for="user-mail"><span lang="en">your@mail.com</span></label>
+
+                <svg class="modal-icon">
+                  <use href="./images/icons/main/modal-icon/modal.svg#icon-email"></use>
+                </svg>
+
+              </div>
+
+              <div class="modal-container comment">
+                
+                <textarea class="modal-comment" name="user-comment" id="user-comment" placeholder="Введите текст" data-placeholder="Введите текст"></textarea>
+                <label class="label modal-label" for="user-comment">Комментарий</label>
+
+              </div>
+
+              <div class="modal-container checkbox">
+                
+                
+                <label class="checkbox-label" for="accept">
+                  <input class="modal-checkbox" type="checkbox" name="accept" id="accept">
+                  <span class="modal-check-icon"></span>
+                  Соглашаюсь с рассылкой и принимаю <a class="modal-conditions" href="">Условия договора</a>
+                </label>
+                
+              </div>
+
+              <button class="modal-sub-btn" type="submit">Отправить</button>
+          
+          </form>
+        
       </div>
     </div>
 
 
     <!-- ---------------------------SCRIPT-------------------------------- -->
+
+    <!-- footer placeholder -->
+    <script>
+      document.querySelector('.foot-form-input').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.foot-form-input').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+    <!-- modal -->
     <script src="./js/modal.js"></script>
+
+    <!-- modal-placeholder -->
+    <script>
+      document.querySelector('.input-name').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.input-name').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+      <script>
+      document.querySelector('.input-tel').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.input-tel').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+      <script>
+      document.querySelector('.input-mail').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.input-mail').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+    <script>
+      document.querySelector('.modal-comment').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.modal-comment').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
   </body>
 </html>
